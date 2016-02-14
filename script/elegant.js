@@ -20,7 +20,7 @@
             //layout
             background: 'black',
             color: 'white',
-            crossSize: 5,
+            crossSize: 2,
             iconSize: 2,
             
             //social
