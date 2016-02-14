@@ -1,13 +1,25 @@
-(function($){
-    $.fn.elegant = function(opt){
+(function($) {
+    $.fn.elegant = function(opt) {
         var options = $.extend(true, {
             
+            //animations
+            showEffect: 'fade',
+            showOptions: [],
+            showDuration: 400,
+            showComplete: null,
+            hideEffect: 'fade',
+            hideOptions: [],
+            hideDuration: 400,
+            hideComplete: null,
+                        
             //config
             newTab: true,
+            clickNextToClose: false,
+            showCross: true,
             
             //layout
             background: 'black',
-            color: 'green',
+            color: 'white',
             crossSize: 5,
             iconSize: 1,
             
@@ -90,41 +102,76 @@
             
         }, opt);
         
-        var socials = ['facebook', 'twitter', 'linkedin', 'github', 'vk', 'mail', 'website', 'instagram', 'flickr', 'googleplus', 'youtube'];        
-        
         function getNetworks() {
             var list = '';
             for (var i = 0; i < socials.length; i++) {
                 if(options[socials[i]].id != null) {
                     var target = null;
+                    
                     if(options.newTab == true) {
                         target = ' target="_blank"';
                     } else if(option[socials[i]].target != null) {
                         target = ' target="' + target + '"';
                     }
-                    list += '<li id="elg-network elg-' + socials[i] + '">' +
-                            '    <a href="https://www.facebook.com/' + options[socials[i]].id + '"' + target + '>' +
-                            '        <i class="fa fa-' + options[socials[i]].faIcon + ' fa-' + options.iconSize + 'x"></i>' +
-                            '    </a>' +
-                            '</li>';
+                    
+                    list += 
+                        '<li class="elg-network" id="elg-' + socials[i] + '">' +
+                        '    <a href="https://www.facebook.com/' + options[socials[i]].id + '"' + target + '>' +
+                        '        <i class="fa fa-' + options[socials[i]].faIcon + ' fa-' + options.iconSize + 'x"></i>' +
+                        '    </a>' +
+                        '</li>';
                 }
             }
             
             return list;
         }
         
-        var elegantBody = 
-            '<div id="elg-parent" style="color: ' + options.color + ';">' +
-            '    <div id="elg-model">' +
-            '        <span id="elg-cross"><i class="fa fa-times fa-' + options.crossSize + 'x"></i></span>' +
-            '        <div id="elg-social">' +
-            '            <ul id="elg-list">' +
-            '                ' + getNetworks() +
-            '            </ul>' +
-            '        </div>' +
-            '    </div>' +
-            '</div>';
+        function getElegant() {
             
-        this.parent().append(elegantBody);
+            var cross = null;
+            if(options.showCross) {
+                cross = '<span id="elg-cross"><i class="fa fa-times fa-' + options.crossSize + 'x"></i></span>';    
+            }
+            
+            var elegantBody = 
+                '<div id="elg-parent" style="display: none; color: ' + options.color + '; background-color: ' + options.background + ';">' +
+                '    <div id="elg-model">' +
+                '        ' + cross +
+                '        <div id="elg-social">' +
+                '            <ul id="elg-list">' +
+                '                ' + getNetworks() +
+                '            </ul>' +
+                '        </div>' +
+                '    </div>' +
+                '</div>';
+            
+            return elegantBody;
+        }
+                
+        var socials = ['facebook', 'twitter', 'linkedin', 'github', 'vk', 'mail', 'website', 'instagram', 'flickr', 'googleplus', 'youtube'];
+        this.parent().append(getElegant());
+
+        //event listener
+        if(options.clickNextToClose) {
+            $('#elg-parent').click(function(){
+                if(!$('#elg-list').is(':hover')) {
+                    $("#elg-parent").hide(options.hideEffect, options.hideOptions, options.hideDuration, options.hideComplete);
+                }
+            });
+        }
+        
+        if(options.showCross) {
+            $('#elg-cross').click(function() {
+                if($('#elg-parent').css('display') == 'block') {
+                    $('#elg-parent').hide(options.hideEffect, options.hideOptions, options.hideDuration, options.hideComplete);
+                }
+            });
+        }
+        
+        $(this).click(function() {
+            if($('#elg-parent').css('display') == 'none') {
+                $('#elg-parent').show(options.showEffect, options.showOptions, options.showDuration, options.showComplete);
+            }
+        });
     };
 })(jQuery);
