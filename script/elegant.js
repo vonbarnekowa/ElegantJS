@@ -14,13 +14,13 @@
                         
             //config
             newTab: true,
-            clickNextToClose: false,
+            clickNextToClose: true,
             showCross: true,
             
             //layout
             background: 'black',
             color: 'white',
-            crossSize: 5,
+            crossSize: 2,
             iconSize: 2,
             
             //social
@@ -116,7 +116,7 @@
                     
                     list += 
                         '<li class="elg-network" id="elg-' + socials[i] + '">' +
-                        '    <a class="elg-network-link" href="https://www.facebook.com/' + options[socials[i]].id + '"' + target + ' style="color: ' + options.color + '" onMouseOver="this.style.backgroundColor=\'' + options[socials[i]].color + '\'" onMouseOut="this.style.backgroundColor=\'transparent\'">' +
+                        '    <a class="elg-network-link" href="' + options[socials[i]].url + options[socials[i]].id + '"' + target + ' style="color: ' + options.color + '" onMouseOver="this.style.backgroundColor=\'' + options[socials[i]].color + '\'" onMouseOut="this.style.backgroundColor=\'transparent\'">' +
                         '        <i class="fa fa-' + options[socials[i]].faIcon + ' fa-' + options.iconSize + 'x"></i>' +
                         '    </a>' +
                         '</li>';
