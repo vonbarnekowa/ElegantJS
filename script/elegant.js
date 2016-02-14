@@ -21,82 +21,82 @@
             background: 'black',
             color: 'white',
             crossSize: 5,
-            iconSize: 1,
+            iconSize: 2,
             
             //social
             facebook: {
                 id: null,
                 faIcon: 'facebook',
-                color: '',
+                color: '#3b5998',
                 url: 'https://www.facebook.com/',
                 target: null},
                 
             twitter: {
                 id: null,
                 faIcon: 'twitter',
-                color: '',
+                color: '#00aced',
                 url: 'https://twitter.com/',
                 target: null},
                 
             linkedin: {
                 id: null,
                 faIcon: 'linkedin',
-                color: '',
+                color: '#007bb6',
                 url: 'https://www.linkedin.com/in/',
                 target: null},
                 
             github: {
                 id: null,
                 faIcon: 'github',
-                color: '',
+                color: '#9C7A5B',
                 url: 'https://github.com/',
                 target: null},
                 
             vk: {
                 id: null,
                 faIcon: 'vk',
-                color: '',
+                color: '#45668e',
                 url: 'https://vk.com/',
                 target: null},
                 
             mail: {
                 id: null,
                 faIcon: 'envelope',
-                color: '',
+                color: '#52941E',
                 url: 'mailto:',
                 target: null},
                 
             website: {
                 id: null,
                 faIcon: 'link',
-                color: '',
+                color: '#002cff',
                 url: '',
                 target: null},
                 
             instagram: {
                 id: null,
                 faIcon: 'instagram',
-                color: '',
+                color: '#517fa4',
                 url: 'https://instagram.com/',
                 target: null},
                 
             flickr: {
                 id: null,
                 faIcon: 'flickr',
-                color: '',
+                color: '#ff0084',
                 url: 'https://www.flickr.com/photos/',
                 target: null},
             googleplus: {
                 id: null,
                 faIcon: 'google-plus',
-                color: '',
+                color: '#dd4b39',
                 url: 'https://plus.google.com/',
                 target: null},
             
             youtube: {
                 id: null,
                 faIcon: 'youtube-play',
-                color: '',
+                color: '#bb0000',
                 url: 'https://youtube.com/',
                 target: null}
             
@@ -116,7 +116,7 @@
                     
                     list += 
                         '<li class="elg-network" id="elg-' + socials[i] + '">' +
-                        '    <a href="https://www.facebook.com/' + options[socials[i]].id + '"' + target + '>' +
+                        '    <a class="elg-network-link" href="https://www.facebook.com/' + options[socials[i]].id + '"' + target + ' style="color: ' + options.color + '" onMouseOver="this.style.backgroundColor=\'' + options[socials[i]].color + '\'" onMouseOut="this.style.backgroundColor=\'transparent\'">' +
                         '        <i class="fa fa-' + options[socials[i]].faIcon + ' fa-' + options.iconSize + 'x"></i>' +
                         '    </a>' +
                         '</li>';
@@ -127,14 +127,13 @@
         }
         
         function getElegant() {
-            
             var cross = null;
             if(options.showCross) {
-                cross = '<span id="elg-cross"><i class="fa fa-times fa-' + options.crossSize + 'x"></i></span>';    
+                cross = '<span id="elg-cross"><i class="fa fa-times fa-' + options.crossSize + 'x" style="color: ' + options.color + ';"></i></span>';    
             }
             
             var elegantBody = 
-                '<div id="elg-parent" style="display: none; color: ' + options.color + '; background-color: ' + options.background + ';">' +
+                '<div id="elg-parent" style="display: none; background-color: ' + options.background + ';">' +
                 '    <div id="elg-model">' +
                 '        ' + cross +
                 '        <div id="elg-social">' +
