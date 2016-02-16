@@ -1,3 +1,11 @@
+html, body {
+    height: 100%;
+    min-height: 100%;
+    width: 100%;
+    border: 0;
+    margin: 0;
+}
+
 #elg-parent {
     position: fixed;
     top: 0;
@@ -15,18 +23,14 @@
 
 #elg-parent #elg-model {
     width: 100%;
-    height: calc(50% - 60px);
-}
-
-#elg-parent #elg-model:before {
-    content: ' ';
-    display: inline-block;
+    display: table;
     height: 100%;
-    vertical-align: middle;
 }
 
 #elg-parent #elg-social {
+    display: table-cell;
     text-align: center;
+    vertical-align: middle;
 }
 
 #elg-parent #elg-list {
