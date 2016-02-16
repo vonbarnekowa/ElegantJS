@@ -99,7 +99,140 @@
                 faIcon: "youtube-play",
                 color: "#bb0000",
                 url: "https://youtube.com/",
-                target: null}
+                target: null},
+            
+            pinterest: {
+                id: null,
+                faIcon: "pinterest-p",
+                color: "#bd081c",
+                url: "https://www.pinterest.com/",
+                target: null},
+                
+            skype: {
+                id: null,
+                faIcon: "skype",
+                color: "#12A5F4",
+                url: "skype:",
+                target: null},
+                
+            jsfindle: {
+                id: null,
+                faIcon: "jsfindle",
+                color: "#efefe7",
+                url: "https://jsfindle.net/",
+                target: null},
+            
+            git: {
+                id: null,
+                faIcon: "git",
+                color: "#efefe7",
+                url: "",
+                target: null},
+                
+            vine: {
+                id: null,
+                faIcon: "vine",
+                color: "#02a379",
+                url: "https://vine.co/v/",
+                target: null},
+            
+            tel: {
+                id: null,
+                faIcon: "phone",
+                color: "#008080",
+                url: "tel:",
+                target: null},
+            
+            vimeo: {
+                id: null,
+                faIcon: "vimeo",
+                color: "#44bbff",
+                url: "https://vimeo.com/",
+                target: null},
+            
+            wordpress: {
+                id: null,
+                faIcon: "wordpress",
+                color: "#999999",
+                url: "",
+                target: null},
+            
+            soundcloud: {
+                id: null,
+                faIcon: "soundcloud",
+                color: "#ff5500",
+                url: "https://soundcloud.com/",
+                target: null},
+            
+            steam: {
+                id: null,
+                faIcon: "steam",
+                color: "#171a21",
+                url: "steam:",
+                target: null},
+            
+            codepen: {
+                id: null,
+                faIcon: "codepen",
+                color: "#000000",
+                url: "http://codepen.io/",
+                target: null},
+            
+            bitcoin: {
+                id: null,
+                faIcon: "btc",
+                color: "#f7931a",
+                url: "bitcoin:",
+                target: null},
+            
+            paypal: {
+                id: null,
+                faIcon: "paypal",
+                color: "#053385",
+                url: "https://paypal.me/",
+                target: null},
+            
+            joomla: {
+                id: null,
+                faIcon: "joomla",
+                color: "#7cbf4b",
+                url: "",
+                target: null},
+            
+            behance: {
+                id: null,
+                faIcon: "behance",
+                color: "#0075ff",
+                url: "https://www.behance.net/",
+                target: null},
+                
+            bitbucket: {
+                id: null,
+                faIcon: "bitbucket",
+                color: "#205081",
+                url: "https://bitbucket.org/",
+                target: null},
+                
+            spotify: {
+                id: null,
+                faIcon: "spotify",
+                color: "#2ebd59",
+                url: "https://open.spotify.com/user/",
+                target: null},
+                
+            trello: {
+                id: null,
+                faIcon: "trello",
+                color: "#026aa7",
+                url: "https://trello.com/",
+                target: null},
+            
+            twitch: {
+                id: null,
+                faIcon: "twitch",
+                color: "#6441a5",
+                url: "http://www.twitch.tv/",
+                target: null},
             
         }, opt);
         
@@ -149,7 +282,7 @@
             return elegantBody;
         }
                 
-        var socials = ["facebook", "twitter", "linkedin", "github", "vk", "mail", "website", "instagram", "flickr", "googleplus", "youtube"];
+        var socials = ["facebook", "twitter", "linkedin", "github", "vk", "mail", "website", "instagram", "flickr", "googleplus", "youtube", "pinterest", "skype", "jsfindle", "git", "vine", "tel", "vimeo", "wordpress", "soundcloud", "steam", "codepen", "bitcoin", "paypal", "joomla", "behance", "bitbucket", "spotify", "trello", "twitch"];
         this.parent().append(getElegant());
 
         //event listener
