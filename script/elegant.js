@@ -232,7 +232,7 @@
                 faIcon: "twitch",
                 color: "#6441a5",
                 url: "http://www.twitch.tv/",
-                target: null},
+                target: null}
             
         }, opt);
         
