@@ -105,12 +105,12 @@
         function getNetworks() {
             var list = '';
             for (var i = 0; i < socials.length; i++) {
-                if(options[socials[i]].id != null) {
+                if (options[socials[i]].id != null) {
                     var target = null;
                     
-                    if(options.newTab == true) {
+                    if (options.newTab == true) {
                         target = ' target="_blank"';
-                    } else if(option[socials[i]].target != null) {
+                    } else if (option[socials[i]].target != null) {
                         target = ' target="' + target + '"';
                     }
                     
@@ -128,7 +128,7 @@
         
         function getElegant() {
             var cross = null;
-            if(options.showCross) {
+            if (options.showCross) {
                 cross = '<span id="elg-cross"><i class="fa fa-times fa-' + options.crossSize + 'x" style="color: ' + options.color + ';"></i></span>';    
             }
             
@@ -151,24 +151,24 @@
         this.parent().append(getElegant());
 
         //event listener
-        if(options.clickNextToClose) {
+        if (options.clickNextToClose) {
             $('#elg-parent').click(function(){
-                if(!$('#elg-list').is(':hover')) {
+                if ($('.elg-network-link:hover').length == 0) {
                     $("#elg-parent").hide(options.hideEffect, options.hideOptions, options.hideDuration, options.hideComplete);
                 }
             });
         }
         
-        if(options.showCross) {
+        if (options.showCross) {
             $('#elg-cross').click(function() {
-                if($('#elg-parent').css('display') == 'block') {
+                if ($('#elg-parent').css('display') == 'block') {
                     $('#elg-parent').hide(options.hideEffect, options.hideOptions, options.hideDuration, options.hideComplete);
                 }
             });
         }
         
         $(this).click(function() {
-            if($('#elg-parent').css('display') == 'none') {
+            if ($('#elg-parent').css('display') == 'none') {
                 $('#elg-parent').show(options.showEffect, options.showOptions, options.showDuration, options.showComplete);
             }
         });
