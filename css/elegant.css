@@ -1,3 +1,5 @@
+/* Default */
+
 html, body {
     height: 100%;
     min-height: 100%;
@@ -16,7 +18,7 @@ html, body {
 
 #elg-parent #elg-cross {
     position: absolute;
-    top: 0px;
+    top: 20px;
     right: 20px;
     cursor: pointer;
 }
@@ -41,8 +43,6 @@ html, body {
 #elg-parent .elg-network {
     display: inline-block;
     overflow: hidden;
-    width: 60px;
-    height: 60px;
     vertical-align: top;
     border: 3px solid white;
     margin: 10px;
@@ -51,10 +51,55 @@ html, body {
 
 #elg-parent .elg-network-link {
     display: inline-block;
+}
+
+#elg-parent .elg-network .elg-network-link i {
+    vertical-align: middle !important;
+}
+
+/* Custom */
+
+#elg-parent.elg-fa-size-1 .elg-network, #elg-parent.elg-fa-size-1 .elg-network-link {
+    width: 50px !important;
+    height: 50px;
+}
+
+#elg-parent.elg-fa-size-1 .elg-network .elg-network-link i {
+    line-height: 50px;
+}
+
+#elg-parent.elg-fa-size-2 .elg-network, #elg-parent.elg-fa-size-2 .elg-network-link {
     width: 60px !important;
     height: 60px;
 }
 
-.elg-network-link i {
+#elg-parent.elg-fa-size-2 .elg-network .elg-network-link i {
     line-height: 60px;
+}
+
+#elg-parent.elg-fa-size-3 .elg-network, #elg-parent.elg-fa-size-3 .elg-network-link {
+    width: 80px !important;
+    height: 80px;
+}
+
+#elg-parent.elg-fa-size-3 .elg-network .elg-network-link i {
+    line-height: 80px;
+}
+
+#elg-parent.elg-fa-size-4 .elg-network, #elg-parent.elg-fa-size-4 .elg-network-link {
+    width: 100px !important;
+    height: 100px;
+}
+
+#elg-parent.elg-fa-size-4 .elg-network .elg-network-link i {
+    line-height: 100px;
+}
+
+#elg-parent.elg-fa-size-5 .elg-network, #elg-parent.elg-fa-size-5 .elg-network-link {
+    width: 120px !important;
+    height: 120px;
+}
+
+#elg-parent.elg-fa-size-5 .elg-network .elg-network-link i {
+    line-height: 120px;
 }
