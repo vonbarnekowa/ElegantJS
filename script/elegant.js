@@ -119,7 +119,7 @@
                 id: null,
                 faIcon: "jsfiddle",
                 color: "#1c90f3",
-                url: "https://jsfindle.net/",
+                url: "https://jsfiddle.net/",
                 target: null},
             
             git: {
