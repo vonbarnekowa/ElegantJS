@@ -3,11 +3,11 @@
         var options = $.extend(true, {
             
             //animations
-            showEffect: 'fade',
+            showEffect: "fade",
             showOptions: [],
             showDuration: 400,
             showComplete: null,
-            hideEffect: 'fade',
+            hideEffect: "fade",
             hideOptions: [],
             hideDuration: 400,
             hideComplete: null,
@@ -18,92 +18,94 @@
             showCross: true,
             
             //layout
-            background: 'black',
-            color: 'white',
+            background: "black",
+            color: "white",
             crossSize: 2,
             iconSize: 2,
             
             //social
             facebook: {
                 id: null,
-                faIcon: 'facebook',
-                color: '#3b5998',
-                url: 'https://www.facebook.com/',
+                faIcon: "facebook",
+                color: "#3b5998",
+                url: "https://www.facebook.com/",
                 target: null},
                 
             twitter: {
                 id: null,
-                faIcon: 'twitter',
-                color: '#00aced',
-                url: 'https://twitter.com/',
+                faIcon: "twitter",
+                color: "#00aced",
+                url: "https://twitter.com/",
                 target: null},
                 
             linkedin: {
                 id: null,
-                faIcon: 'linkedin',
-                color: '#007bb6',
-                url: 'https://www.linkedin.com/in/',
+                faIcon: "linkedin",
+                color: "#007bb6",
+                url: "https://www.linkedin.com/in/",
                 target: null},
                 
             github: {
                 id: null,
-                faIcon: 'github',
-                color: '#9C7A5B',
-                url: 'https://github.com/',
+                faIcon: "github",
+                color: "#9C7A5B",
+                url: "https://github.com/",
                 target: null},
                 
             vk: {
                 id: null,
-                faIcon: 'vk',
-                color: '#45668e',
-                url: 'https://vk.com/',
+                faIcon: "vk",
+                color: "#45668e",
+                url: "https://vk.com/",
                 target: null},
                 
             mail: {
                 id: null,
-                faIcon: 'envelope',
-                color: '#52941E',
-                url: 'mailto:',
+                faIcon: "envelope",
+                color: "#52941E",
+                url: "mailto:",
                 target: null},
                 
             website: {
                 id: null,
-                faIcon: 'link',
-                color: '#002cff',
-                url: '',
+                faIcon: "link",
+                color: "#002cff",
+                url: "",
                 target: null},
                 
             instagram: {
                 id: null,
-                faIcon: 'instagram',
-                color: '#517fa4',
-                url: 'https://instagram.com/',
+                faIcon: "instagram",
+                color: "#517fa4",
+                url: "https://instagram.com/",
                 target: null},
                 
             flickr: {
                 id: null,
-                faIcon: 'flickr',
-                color: '#ff0084',
-                url: 'https://www.flickr.com/photos/',
+                faIcon: "flickr",
+                color: "#ff0084",
+                url: "https://www.flickr.com/photos/",
                 target: null},
+                
             googleplus: {
                 id: null,
-                faIcon: 'google-plus',
-                color: '#dd4b39',
-                url: 'https://plus.google.com/',
+                faIcon: "google-plus",
+                color: "#dd4b39",
+                url: "https://plus.google.com/",
                 target: null},
             
             youtube: {
                 id: null,
-                faIcon: 'youtube-play',
-                color: '#bb0000',
-                url: 'https://youtube.com/',
+                faIcon: "youtube-play",
+                color: "#bb0000",
+                url: "https://youtube.com/",
                 target: null}
             
         }, opt);
         
         function getNetworks() {
-            var list = '';
+            var list = "";
+            
             for (var i = 0; i < socials.length; i++) {
                 if (options[socials[i]].id != null) {
                     var target = null;
@@ -133,7 +135,7 @@
             }
             
             var elegantBody = 
-                '<div id="elg-parent" style="display: none; background-color: ' + options.background + ';">' +
+                '<div id="elg-parent" class="elg-fa-size-' + options.iconSize + '" style="display: none; background-color: ' + options.background + ';">' +
                 '    <div id="elg-model">' +
                 '        ' + cross +
                 '        <div id="elg-social">' +
@@ -147,29 +149,29 @@
             return elegantBody;
         }
                 
-        var socials = ['facebook', 'twitter', 'linkedin', 'github', 'vk', 'mail', 'website', 'instagram', 'flickr', 'googleplus', 'youtube'];
+        var socials = ["facebook", "twitter", "linkedin", "github", "vk", "mail", "website", "instagram", "flickr", "googleplus", "youtube"];
         this.parent().append(getElegant());
 
         //event listener
         if (options.clickNextToClose) {
-            $('#elg-parent').click(function(){
-                if ($('.elg-network-link:hover').length == 0) {
+            $("#elg-parent").click(function(){
+                if ($(".elg-network-link:hover").length == 0) {
                     $("#elg-parent").hide(options.hideEffect, options.hideOptions, options.hideDuration, options.hideComplete);
                 }
             });
         }
         
         if (options.showCross) {
-            $('#elg-cross').click(function() {
-                if ($('#elg-parent').css('display') == 'block') {
-                    $('#elg-parent').hide(options.hideEffect, options.hideOptions, options.hideDuration, options.hideComplete);
+            $("#elg-cross").click(function() {
+                if ($("#elg-parent").css("display") == "block") {
+                    $("#elg-parent").hide(options.hideEffect, options.hideOptions, options.hideDuration, options.hideComplete);
                 }
             });
         }
         
         $(this).click(function() {
-            if ($('#elg-parent').css('display') == 'none') {
-                $('#elg-parent').show(options.showEffect, options.showOptions, options.showDuration, options.showComplete);
+            if ($("#elg-parent").css("display") == "none") {
+                $("#elg-parent").show(options.showEffect, options.showOptions, options.showDuration, options.showComplete);
             }
         });
     };
