@@ -294,6 +294,12 @@
             });
         }
         
+        $(document).keyup(function(e) {
+            if (e.keyCode == 27) {
+                $("#elg-parent").hide(options.hideEffect, options.hideOptions, options.hideDuration, options.hideComplete);
+            }
+        });
+        
         if (options.showCross) {
             $("#elg-cross").click(function() {
                 if ($("#elg-parent").css("display") == "block") {
