@@ -115,11 +115,11 @@
                 url: "skype:",
                 target: null},
                 
-            jsfindle: {
+            jsfiddle: {
                 id: null,
-                faIcon: "jsfindle",
-                color: "#efefe7",
-                url: "https://jsfindle.net/",
+                faIcon: "jsfiddle",
+                color: "#1c90f3",
+                url: "https://jsfiddle.net/",
                 target: null},
             
             git: {
@@ -232,7 +232,7 @@
                 faIcon: "twitch",
                 color: "#6441a5",
                 url: "http://www.twitch.tv/",
-                target: null},
+                target: null}
             
         }, opt);
         
@@ -282,7 +282,7 @@
             return elegantBody;
         }
                 
-        var socials = ["facebook", "twitter", "linkedin", "github", "vk", "mail", "website", "instagram", "flickr", "googleplus", "youtube", "pinterest", "skype", "jsfindle", "git", "vine", "tel", "vimeo", "wordpress", "soundcloud", "steam", "codepen", "bitcoin", "paypal", "joomla", "behance", "bitbucket", "spotify", "trello", "twitch"];
+        var socials = ["facebook", "twitter", "linkedin", "github", "vk", "mail", "website", "instagram", "flickr", "googleplus", "youtube", "pinterest", "skype", "jsfiddle", "git", "vine", "tel", "vimeo", "wordpress", "soundcloud", "steam", "codepen", "bitcoin", "paypal", "joomla", "behance", "bitbucket", "spotify", "trello", "twitch"];
         this.parent().append(getElegant());
 
         //event listener
